@@ -95,7 +95,6 @@ public class EmptyDatabaseWindow extends javax.swing.JFrame {
         EmptyTables e = new EmptyTables();
         if (mainui != null) {
             mainui.refreshCompaniesCombo();
-            mainui.refreshCatIDCombo();
         }
         setVisible(false); //you can't see me!
         dispose();

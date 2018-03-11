@@ -123,7 +123,6 @@ public class ImportAllRecords extends javax.swing.JFrame {
             this.updateRowsAffectedCount(rowsAffected);
             if (mainUI != null) {
                 mainUI.refreshCompaniesCombo();
-                mainUI.refreshCatIDCombo();
             }
             
         } else {
