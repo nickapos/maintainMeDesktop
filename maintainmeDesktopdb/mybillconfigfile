@@ -1,11 +1,11 @@
 #mybill config file
-#Sat May 16 22:16:41 BST 2015
+#Tue Aug 02 22:55:11 BST 2016
 url=jdbc\:hsqldb\:
 dbname=file\:mydb
 dbdriver=org.hsqldb.jdbcDriver
 DatabaseName=db0
 username=sa
-DataDir=/home/nickapos/testing/myBill/datadir/
+DataDir=/home/nickapos/Dropbox/mybill/datadir/
 BrowseDir=/home/nickapos
 password=
-InDataSet=/home/nickapos/testing/myBill/dataset/
+InDataSet=/home/nickapos/Dropbox/mybill/dataset/
