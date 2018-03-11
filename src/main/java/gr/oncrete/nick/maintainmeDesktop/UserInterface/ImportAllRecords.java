@@ -37,14 +37,14 @@ import gr.oncrete.nick.maintainmeDesktop.BusinessLogic.SelectInfo.SelectAllCompa
 public class ImportAllRecords extends javax.swing.JFrame {
 
     //the main user interface we will need to refresh after the import
-    billsUI mainUI;
+    maintainmeDesktopUI mainUI;
     //the counter that will hold the number of affected rows
     int counter = 0;
 
     /**
      * Creates new form AboutWindow
      */
-    public ImportAllRecords(billsUI a) {
+    public ImportAllRecords(maintainmeDesktopUI a) {
         initComponents();
         mainUI = a;
     }

@@ -1,5 +1,5 @@
 /*
-myBill, bills tracking program
+maintainmeDesktop, bills tracking program
 Copyright (C) 2010  Nick Apostolakis
 
 This program is free software: you can redistribute it and/or modify
@@ -27,7 +27,7 @@ import gr.oncrete.nick.maintainmeDesktop.BusinessLogic.Config;
  *
  * @author nickapos
  */
-public class myBill {
+public class maintainmeDesktop {
 
     /**
      * @param args the command line arguments
@@ -37,7 +37,7 @@ public class myBill {
 
             public void run() {
                 Config cfg = new Config();
-                billsUI a = new billsUI();
+                maintainmeDesktopUI a = new maintainmeDesktopUI();
                 a.setVisible(true);
             }
         });

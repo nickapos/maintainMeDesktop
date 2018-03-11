@@ -30,12 +30,12 @@ import gr.oncrete.nick.maintainmeDesktop.RDBMS.EmptyTables;
  */
 public class EmptyDatabaseWindow extends javax.swing.JFrame {
 
-    billsUI mainui;
+    maintainmeDesktopUI mainui;
 
     /**
      * Creates new form AboutWindow
      */
-    public EmptyDatabaseWindow(billsUI ui) {
+    public EmptyDatabaseWindow(maintainmeDesktopUI ui) {
         mainui = ui;
         initComponents();
     }

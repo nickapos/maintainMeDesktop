@@ -17,7 +17,7 @@
  */
 
 /*
- * billsUI.java
+ * maintainmeDesktopUI.java
  *
  * Created on 15 Ιουν 2010, 11:05:26 μμ
  */
@@ -69,7 +69,7 @@ import java.text.SimpleDateFormat;
  *
  * @author nickapos
  */
-public class billsUI extends javax.swing.JFrame {
+public class maintainmeDesktopUI extends javax.swing.JFrame {
 
     //just the plot panel
     PlotPanel plPanel;
@@ -92,7 +92,7 @@ public class billsUI extends javax.swing.JFrame {
     /**
      * Creates new form billsUI
      */
-    public billsUI() {
+    public maintainmeDesktopUI() {
         initComponents();
         this.interNReportJtableColNames();
 
@@ -210,12 +210,12 @@ public class billsUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle"); // NOI18N
-        setTitle(bundle.getString("billsUI.title")); // NOI18N
+        setTitle(bundle.getString("maintainmeDesktopUI.title")); // NOI18N
 
         InsertEditBillPanel.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
         InsertEditBillPanel.setLayout(new java.awt.GridLayout(9, 2, 1, 1));
 
-        jLabel8.setText(bundle.getString("billsUI.jLabel8.text")); // NOI18N
+        jLabel8.setText(bundle.getString("maintainmeDesktopUI.jLabel8.text")); // NOI18N
         InsertEditBillPanel.add(jLabel8);
 
         inserEditBillComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxActions));
@@ -226,7 +226,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(inserEditBillComboBox);
 
-        jLabel6.setText(bundle.getString("billsUI.jLabel6.text")); // NOI18N
+        jLabel6.setText(bundle.getString("maintainmeDesktopUI.jLabel6.text")); // NOI18N
         InsertEditBillPanel.add(jLabel6);
 
         billIdTextField.setEditable(false);
@@ -237,14 +237,14 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(billIdTextField);
 
-        jLabel1.setText(bundle.getString("billsUI.jLabel1.text")); // NOI18N
+        jLabel1.setText(bundle.getString("maintainmeDesktopUI.jLabel1.text")); // NOI18N
         InsertEditBillPanel.add(jLabel1);
 
         billInsertEditCompanyNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
         InsertEditBillPanel.add(billInsertEditCompanyNameComboBox);
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText(bundle.getString("billsUI.jLabel2.text")); // NOI18N
+        jLabel2.setText(bundle.getString("maintainmeDesktopUI.jLabel2.text")); // NOI18N
         InsertEditBillPanel.add(jLabel2);
 
         dateOfIssueTextField.setText(today.getToday());
@@ -256,7 +256,7 @@ public class billsUI extends javax.swing.JFrame {
         InsertEditBillPanel.add(dateOfIssueTextField);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel3.setText(bundle.getString("billsUI.jLabel3.text")); // NOI18N
+        jLabel3.setText(bundle.getString("maintainmeDesktopUI.jLabel3.text")); // NOI18N
         InsertEditBillPanel.add(jLabel3);
 
         dateOfPaymentTextField.setText(today.getToday());
@@ -264,10 +264,10 @@ public class billsUI extends javax.swing.JFrame {
 
         foreignCurrencySelPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel19.setText(bundle.getString("billsUI.jLabel19.text")); // NOI18N
+        jLabel19.setText(bundle.getString("maintainmeDesktopUI.jLabel19.text")); // NOI18N
         foreignCurrencySelPanel.add(jLabel19);
 
-        foreignCurrencyCheckBox.setText(bundle.getString("billsUI.foreignCurrencyCheckBox.text")); // NOI18N
+        foreignCurrencyCheckBox.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyCheckBox.text")); // NOI18N
         foreignCurrencyCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 foreignCurrencyCheckBoxActionPerformed(evt);
@@ -279,11 +279,11 @@ public class billsUI extends javax.swing.JFrame {
 
         foreignCurrencyValuePanel.setLayout(new javax.swing.BoxLayout(foreignCurrencyValuePanel, javax.swing.BoxLayout.LINE_AXIS));
 
-        foreignCurrencyTextField.setText(bundle.getString("billsUI.foreignCurrencyTextField.text")); // NOI18N
+        foreignCurrencyTextField.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyTextField.text")); // NOI18N
         foreignCurrencyTextField.setEnabled(false);
         foreignCurrencyValuePanel.add(foreignCurrencyTextField);
 
-        showRatesFrameButton.setText(bundle.getString("billsUI.showRatesFrameButton.text")); // NOI18N
+        showRatesFrameButton.setText(bundle.getString("maintainmeDesktopUI.showRatesFrameButton.text")); // NOI18N
         showRatesFrameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showRatesFrameButtonActionPerformed(evt);
@@ -294,7 +294,7 @@ public class billsUI extends javax.swing.JFrame {
         InsertEditBillPanel.add(foreignCurrencyValuePanel);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel4.setText(bundle.getString("billsUI.jLabel4.text")); // NOI18N
+        jLabel4.setText(bundle.getString("maintainmeDesktopUI.jLabel4.text")); // NOI18N
         InsertEditBillPanel.add(jLabel4);
 
         billAmountTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -304,10 +304,10 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(billAmountTextField);
 
-        jLabel22.setText(bundle.getString("billsUI.jLabel22.text")); // NOI18N
+        jLabel22.setText(bundle.getString("maintainmeDesktopUI.jLabel22.text")); // NOI18N
         InsertEditBillPanel.add(jLabel22);
 
-        billCommentTextField.setText(bundle.getString("billsUI.billCommentTextField.text")); // NOI18N
+        billCommentTextField.setText(bundle.getString("maintainmeDesktopUI.billCommentTextField.text")); // NOI18N
         billCommentTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 billCommentTextFieldActionPerformed(evt);
@@ -315,7 +315,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(billCommentTextField);
 
-        billRetrieveButton.setText(bundle.getString("billsUI.billRetrieveButton.text")); // NOI18N
+        billRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.billRetrieveButton.text")); // NOI18N
         billRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 billRetrieveButtonActionPerformed(evt);
@@ -323,7 +323,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(billRetrieveButton);
 
-        billGoButton.setText(bundle.getString("billsUI.billGoButton.text")); // NOI18N
+        billGoButton.setText(bundle.getString("maintainmeDesktopUI.billGoButton.text")); // NOI18N
         billGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 billGoButtonActionPerformed(evt);
@@ -331,11 +331,11 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditBillPanel.add(billGoButton);
 
-        tabs.addTab(bundle.getString("billsUI.InsertEditBillPanel.TabConstraints.tabTitle"), InsertEditBillPanel); // NOI18N
+        tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditBillPanel.TabConstraints.tabTitle"), InsertEditBillPanel); // NOI18N
 
         InsertEditIncome.setLayout(new java.awt.GridLayout(8, 2));
 
-        jLabel13.setText(bundle.getString("billsUI.jLabel13.text")); // NOI18N
+        jLabel13.setText(bundle.getString("maintainmeDesktopUI.jLabel13.text")); // NOI18N
         InsertEditIncome.add(jLabel13);
 
         incomeActionComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxActions));
@@ -346,7 +346,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeActionComboBox);
 
-        jLabel16.setText(bundle.getString("billsUI.jLabel16.text")); // NOI18N
+        jLabel16.setText(bundle.getString("maintainmeDesktopUI.jLabel16.text")); // NOI18N
         InsertEditIncome.add(jLabel16);
 
         incomeIDTextField.setEditable(false);
@@ -357,13 +357,13 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeIDTextField);
 
-        jLabel17.setText(bundle.getString("billsUI.jLabel17.text")); // NOI18N
+        jLabel17.setText(bundle.getString("maintainmeDesktopUI.jLabel17.text")); // NOI18N
         InsertEditIncome.add(jLabel17);
 
         incomeCompanyComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
         InsertEditIncome.add(incomeCompanyComboBox);
 
-        jLabel14.setText(bundle.getString("billsUI.jLabel14.text")); // NOI18N
+        jLabel14.setText(bundle.getString("maintainmeDesktopUI.jLabel14.text")); // NOI18N
         InsertEditIncome.add(jLabel14);
 
         incomeDateTextField.setText(today.getToday());
@@ -371,10 +371,10 @@ public class billsUI extends javax.swing.JFrame {
 
         foreignCurrencySelPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        jLabel24.setText(bundle.getString("billsUI.jLabel24.text")); // NOI18N
+        jLabel24.setText(bundle.getString("maintainmeDesktopUI.jLabel24.text")); // NOI18N
         foreignCurrencySelPanel1.add(jLabel24);
 
-        foreignCurrencyCheckBox1.setText(bundle.getString("billsUI.foreignCurrencyCheckBox1.text")); // NOI18N
+        foreignCurrencyCheckBox1.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyCheckBox1.text")); // NOI18N
         foreignCurrencyCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 foreignCurrencyCheckBox1ActionPerformed(evt);
@@ -386,11 +386,11 @@ public class billsUI extends javax.swing.JFrame {
 
         foreignCurrencyValuePanel1.setLayout(new javax.swing.BoxLayout(foreignCurrencyValuePanel1, javax.swing.BoxLayout.LINE_AXIS));
 
-        foreignCurrencyTextField1.setText(bundle.getString("billsUI.foreignCurrencyTextField1.text")); // NOI18N
+        foreignCurrencyTextField1.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyTextField1.text")); // NOI18N
         foreignCurrencyTextField1.setEnabled(false);
         foreignCurrencyValuePanel1.add(foreignCurrencyTextField1);
 
-        showRatesFrameButton1.setText(bundle.getString("billsUI.showRatesFrameButton1.text")); // NOI18N
+        showRatesFrameButton1.setText(bundle.getString("maintainmeDesktopUI.showRatesFrameButton1.text")); // NOI18N
         showRatesFrameButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showRatesFrameButton1ActionPerformed(evt);
@@ -400,7 +400,7 @@ public class billsUI extends javax.swing.JFrame {
 
         InsertEditIncome.add(foreignCurrencyValuePanel1);
 
-        jLabel15.setText(bundle.getString("billsUI.jLabel15.text")); // NOI18N
+        jLabel15.setText(bundle.getString("maintainmeDesktopUI.jLabel15.text")); // NOI18N
         InsertEditIncome.add(jLabel15);
 
         incomeAmountTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -410,13 +410,13 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeAmountTextField);
 
-        jLabel23.setText(bundle.getString("billsUI.jLabel23.text")); // NOI18N
+        jLabel23.setText(bundle.getString("maintainmeDesktopUI.jLabel23.text")); // NOI18N
         InsertEditIncome.add(jLabel23);
 
-        incomeCommentTextField.setText(bundle.getString("billsUI.incomeCommentTextField.text")); // NOI18N
+        incomeCommentTextField.setText(bundle.getString("maintainmeDesktopUI.incomeCommentTextField.text")); // NOI18N
         InsertEditIncome.add(incomeCommentTextField);
 
-        incomeRetrieveButton.setText(bundle.getString("billsUI.incomeRetrieveButton.text")); // NOI18N
+        incomeRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.incomeRetrieveButton.text")); // NOI18N
         incomeRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 incomeRetrieveButtonActionPerformed(evt);
@@ -424,7 +424,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeRetrieveButton);
 
-        incomeGoButton.setText(bundle.getString("billsUI.incomeGoButton.text")); // NOI18N
+        incomeGoButton.setText(bundle.getString("maintainmeDesktopUI.incomeGoButton.text")); // NOI18N
         incomeGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 incomeGoButtonActionPerformed(evt);
@@ -432,11 +432,11 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeGoButton);
 
-        tabs.addTab(bundle.getString("billsUI.InsertEditIncome.TabConstraints.tabTitle"), InsertEditIncome); // NOI18N
+        tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditIncome.TabConstraints.tabTitle"), InsertEditIncome); // NOI18N
 
         InsertEditCompanyPanel.setLayout(new java.awt.GridLayout(6, 2));
 
-        jLabel5.setText(bundle.getString("billsUI.jLabel5.text")); // NOI18N
+        jLabel5.setText(bundle.getString("maintainmeDesktopUI.jLabel5.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel5);
 
         companyDetailsComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxActions));
@@ -447,23 +447,23 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditCompanyPanel.add(companyDetailsComboBox);
 
-        jLabel9.setText(bundle.getString("billsUI.jLabel9.text")); // NOI18N
+        jLabel9.setText(bundle.getString("maintainmeDesktopUI.jLabel9.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel9);
 
         companyDetailsIDTextField.setEditable(false);
         InsertEditCompanyPanel.add(companyDetailsIDTextField);
 
-        jLabel18.setText(bundle.getString("billsUI.jLabel18.text")); // NOI18N
+        jLabel18.setText(bundle.getString("maintainmeDesktopUI.jLabel18.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel18);
 
         catComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCategoriesCombo()));
         InsertEditCompanyPanel.add(catComboBox);
 
-        jLabel10.setText(bundle.getString("billsUI.jLabel10.text")); // NOI18N
+        jLabel10.setText(bundle.getString("maintainmeDesktopUI.jLabel10.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel10);
         InsertEditCompanyPanel.add(companyDetailsAfmTextField);
 
-        jLabel12.setText(bundle.getString("billsUI.jLabel12.text")); // NOI18N
+        jLabel12.setText(bundle.getString("maintainmeDesktopUI.jLabel12.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel12);
 
         companyDetailsCNameTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -478,7 +478,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditCompanyPanel.add(companyDetailsCNameTextField);
 
-        companyRetrieveButton.setText(bundle.getString("billsUI.companyRetrieveButton.text")); // NOI18N
+        companyRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.companyRetrieveButton.text")); // NOI18N
         companyRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 companyRetrieveButtonActionPerformed(evt);
@@ -486,7 +486,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditCompanyPanel.add(companyRetrieveButton);
 
-        companyDetailsGoButton.setText(bundle.getString("billsUI.companyDetailsGoButton.text")); // NOI18N
+        companyDetailsGoButton.setText(bundle.getString("maintainmeDesktopUI.companyDetailsGoButton.text")); // NOI18N
         companyDetailsGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 companyDetailsGoButtonActionPerformed(evt);
@@ -494,11 +494,11 @@ public class billsUI extends javax.swing.JFrame {
         });
         InsertEditCompanyPanel.add(companyDetailsGoButton);
 
-        tabs.addTab(bundle.getString("billsUI.InsertEditCompanyPanel.TabConstraints.tabTitle"), InsertEditCompanyPanel); // NOI18N
+        tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditCompanyPanel.TabConstraints.tabTitle"), InsertEditCompanyPanel); // NOI18N
 
         ReportsPanel.setLayout(new javax.swing.BoxLayout(ReportsPanel, javax.swing.BoxLayout.Y_AXIS));
 
-        jLabel7.setText(bundle.getString("billsUI.jLabel7.text")); // NOI18N
+        jLabel7.setText(bundle.getString("maintainmeDesktopUI.jLabel7.text")); // NOI18N
         reportPanel.add(jLabel7);
 
         reportComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxReports));
@@ -511,16 +511,16 @@ public class billsUI extends javax.swing.JFrame {
 
         ReportsPanel.add(reportPanel);
 
-        jLabel11.setText(bundle.getString("billsUI.jLabel11.text")); // NOI18N
+        jLabel11.setText(bundle.getString("maintainmeDesktopUI.jLabel11.text")); // NOI18N
         reportParameterPanel.add(jLabel11);
 
-        jLabel20.setText(bundle.getString("billsUI.jLabel20.text")); // NOI18N
+        jLabel20.setText(bundle.getString("maintainmeDesktopUI.jLabel20.text")); // NOI18N
         reportParameterPanel.add(jLabel20);
 
         reportParametersComboBox.setPreferredSize(new java.awt.Dimension(100, 27));
         reportParameterPanel.add(reportParametersComboBox);
 
-        jLabel21.setText(bundle.getString("billsUI.jLabel21.text")); // NOI18N
+        jLabel21.setText(bundle.getString("maintainmeDesktopUI.jLabel21.text")); // NOI18N
         reportParameterPanel.add(jLabel21);
 
         reportParametersFinalComboBox.setEnabled(false);
@@ -558,7 +558,7 @@ public class billsUI extends javax.swing.JFrame {
 
         ReportsPanel.add(jScrollPane1);
 
-        reportButton.setText(bundle.getString("billsUI.reportButton.text")); // NOI18N
+        reportButton.setText(bundle.getString("maintainmeDesktopUI.reportButton.text")); // NOI18N
         reportButton.setAlignmentY(0.0F);
         reportButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -567,7 +567,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         goPanel.add(reportButton);
 
-        jButton1.setText(bundle.getString("billsUI.jButton1.text")); // NOI18N
+        jButton1.setText(bundle.getString("maintainmeDesktopUI.jButton1.text")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -577,13 +577,13 @@ public class billsUI extends javax.swing.JFrame {
 
         ReportsPanel.add(goPanel);
 
-        tabs.addTab(bundle.getString("billsUI.ReportsPanel.TabConstraints.tabTitle"), ReportsPanel); // NOI18N
+        tabs.addTab(bundle.getString("maintainmeDesktopUI.ReportsPanel.TabConstraints.tabTitle"), ReportsPanel); // NOI18N
 
-        jMenu1.setText(bundle.getString("billsUI.jMenu1.text")); // NOI18N
+        jMenu1.setText(bundle.getString("maintainmeDesktopUI.jMenu1.text")); // NOI18N
 
-        importMenu.setText(bundle.getString("billsUI.importMenu.text")); // NOI18N
+        importMenu.setText(bundle.getString("maintainmeDesktopUI.importMenu.text")); // NOI18N
 
-        jMenuItem2.setText(bundle.getString("billsUI.jMenuItem2.text")); // NOI18N
+        jMenuItem2.setText(bundle.getString("maintainmeDesktopUI.jMenuItem2.text")); // NOI18N
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -591,7 +591,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         importMenu.add(jMenuItem2);
 
-        jMenuItem1.setText(bundle.getString("billsUI.jMenuItem1.text")); // NOI18N
+        jMenuItem1.setText(bundle.getString("maintainmeDesktopUI.jMenuItem1.text")); // NOI18N
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -601,9 +601,9 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenu1.add(importMenu);
 
-        exportMenu.setText(bundle.getString("billsUI.exportMenu.text")); // NOI18N
+        exportMenu.setText(bundle.getString("maintainmeDesktopUI.exportMenu.text")); // NOI18N
 
-        exportDBMenuItem.setText(bundle.getString("billsUI.exportDBMenuItem.text")); // NOI18N
+        exportDBMenuItem.setText(bundle.getString("maintainmeDesktopUI.exportDBMenuItem.text")); // NOI18N
         exportDBMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportDBMenuItemActionPerformed(evt);
@@ -611,7 +611,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         exportMenu.add(exportDBMenuItem);
 
-        exportCSVsMenuItem.setText(bundle.getString("billsUI.exportCSVsMenuItem.text")); // NOI18N
+        exportCSVsMenuItem.setText(bundle.getString("maintainmeDesktopUI.exportCSVsMenuItem.text")); // NOI18N
         exportCSVsMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportCSVsMenuItemActionPerformed(evt);
@@ -619,7 +619,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         exportMenu.add(exportCSVsMenuItem);
 
-        exportCVSYear.setText(bundle.getString("billsUI.exportCVSYear.text")); // NOI18N
+        exportCVSYear.setText(bundle.getString("maintainmeDesktopUI.exportCVSYear.text")); // NOI18N
         exportCVSYear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportCVSYearActionPerformed(evt);
@@ -627,7 +627,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         exportMenu.add(exportCVSYear);
 
-        exportCVSPeriod.setText(bundle.getString("billsUI.exportCVSPeriod.text")); // NOI18N
+        exportCVSPeriod.setText(bundle.getString("maintainmeDesktopUI.exportCVSPeriod.text")); // NOI18N
         exportCVSPeriod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportCVSPeriodActionPerformed(evt);
@@ -635,7 +635,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         exportMenu.add(exportCVSPeriod);
 
-        exportQIF.setText(bundle.getString("billsUI.exportQIF.text")); // NOI18N
+        exportQIF.setText(bundle.getString("maintainmeDesktopUI.exportQIF.text")); // NOI18N
         exportQIF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportQIFActionPerformed(evt);
@@ -645,9 +645,9 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenu1.add(exportMenu);
 
-        emptyDBMenyItem.setText(bundle.getString("billsUI.emptyDBMenyItem.text")); // NOI18N
+        emptyDBMenyItem.setText(bundle.getString("maintainmeDesktopUI.emptyDBMenyItem.text")); // NOI18N
 
-        emptyDBMenuItem.setText(bundle.getString("billsUI.emptyDBMenuItem.text")); // NOI18N
+        emptyDBMenuItem.setText(bundle.getString("maintainmeDesktopUI.emptyDBMenuItem.text")); // NOI18N
         emptyDBMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emptyDBMenuItemActionPerformed(evt);
@@ -657,7 +657,7 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenu1.add(emptyDBMenyItem);
 
-        executeSqlMenuItem.setText(bundle.getString("billsUI.executeSqlMenuItem.text")); // NOI18N
+        executeSqlMenuItem.setText(bundle.getString("maintainmeDesktopUI.executeSqlMenuItem.text")); // NOI18N
         executeSqlMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 executeSqlMenuItemActionPerformed(evt);
@@ -666,7 +666,7 @@ public class billsUI extends javax.swing.JFrame {
         jMenu1.add(executeSqlMenuItem);
 
         shutdownMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
-        shutdownMenuItem.setText(bundle.getString("billsUI.shutdownMenuItem.text")); // NOI18N
+        shutdownMenuItem.setText(bundle.getString("maintainmeDesktopUI.shutdownMenuItem.text")); // NOI18N
         shutdownMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 shutdownMenuItemActionPerformed(evt);
@@ -676,14 +676,14 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setText(bundle.getString("billsUI.jMenu3.text")); // NOI18N
+        jMenu3.setText(bundle.getString("maintainmeDesktopUI.jMenu3.text")); // NOI18N
         jMenu3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu3ActionPerformed(evt);
             }
         });
 
-        validateVatMenuItem.setText(bundle.getString("billsUI.validateVatMenuItem.text")); // NOI18N
+        validateVatMenuItem.setText(bundle.getString("maintainmeDesktopUI.validateVatMenuItem.text")); // NOI18N
         validateVatMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 validateVatMenuItemActionPerformed(evt);
@@ -691,7 +691,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         jMenu3.add(validateVatMenuItem);
 
-        manageCategoriesMenuItem.setText(bundle.getString("billsUI.manageCategoriesMenuItem.text")); // NOI18N
+        manageCategoriesMenuItem.setText(bundle.getString("maintainmeDesktopUI.manageCategoriesMenuItem.text")); // NOI18N
         manageCategoriesMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageCategoriesMenuItemActionPerformed(evt);
@@ -699,9 +699,9 @@ public class billsUI extends javax.swing.JFrame {
         });
         jMenu3.add(manageCategoriesMenuItem);
 
-        mergeOperationsJMenu.setText(bundle.getString("billsUI.mergeOperationsJMenu.text")); // NOI18N
+        mergeOperationsJMenu.setText(bundle.getString("maintainmeDesktopUI.mergeOperationsJMenu.text")); // NOI18N
 
-        jMenuItem9.setText(bundle.getString("billsUI.jMenuItem9.text")); // NOI18N
+        jMenuItem9.setText(bundle.getString("maintainmeDesktopUI.jMenuItem9.text")); // NOI18N
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem9ActionPerformed(evt);
@@ -709,7 +709,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         mergeOperationsJMenu.add(jMenuItem9);
 
-        jMenuItem10.setText(bundle.getString("billsUI.jMenuItem10.text")); // NOI18N
+        jMenuItem10.setText(bundle.getString("maintainmeDesktopUI.jMenuItem10.text")); // NOI18N
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -719,7 +719,7 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenu3.add(mergeOperationsJMenu);
 
-        changeDBCurrencyMenuItem.setText(bundle.getString("billsUI.changeDBCurrencyMenuItem.text")); // NOI18N
+        changeDBCurrencyMenuItem.setText(bundle.getString("maintainmeDesktopUI.changeDBCurrencyMenuItem.text")); // NOI18N
         changeDBCurrencyMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 changeDBCurrencyMenuItemActionPerformed(evt);
@@ -727,7 +727,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         jMenu3.add(changeDBCurrencyMenuItem);
 
-        calculateAmortizationMenuItem.setText(bundle.getString("billsUI.calculateAmortizationMenuItem.text")); // NOI18N
+        calculateAmortizationMenuItem.setText(bundle.getString("maintainmeDesktopUI.calculateAmortizationMenuItem.text")); // NOI18N
         calculateAmortizationMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calculateAmortizationMenuItemActionPerformed(evt);
@@ -735,7 +735,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         jMenu3.add(calculateAmortizationMenuItem);
 
-        presentTransactionsPerCompanyMenuItem.setText(bundle.getString("billsUI.presentTransactionsPerCompanyMenuItem.text")); // NOI18N
+        presentTransactionsPerCompanyMenuItem.setText(bundle.getString("maintainmeDesktopUI.presentTransactionsPerCompanyMenuItem.text")); // NOI18N
         presentTransactionsPerCompanyMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 presentTransactionsPerCompanyMenuItemActionPerformed(evt);
@@ -743,7 +743,7 @@ public class billsUI extends javax.swing.JFrame {
         });
         jMenu3.add(presentTransactionsPerCompanyMenuItem);
 
-        invertRecordMenuItem.setText(bundle.getString("billsUI.invertRecordMenuItem.text")); // NOI18N
+        invertRecordMenuItem.setText(bundle.getString("maintainmeDesktopUI.invertRecordMenuItem.text")); // NOI18N
         invertRecordMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 invertRecordMenuItemActionPerformed(evt);
@@ -753,9 +753,9 @@ public class billsUI extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu2.setText(bundle.getString("billsUI.jMenu2.text")); // NOI18N
+        jMenu2.setText(bundle.getString("maintainmeDesktopUI.jMenu2.text")); // NOI18N
 
-        aboutMenuItem.setText(bundle.getString("billsUI.aboutMenuItem.text")); // NOI18N
+        aboutMenuItem.setText(bundle.getString("maintainmeDesktopUI.aboutMenuItem.text")); // NOI18N
         aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aboutMenuItemActionPerformed(evt);
@@ -1187,7 +1187,7 @@ public class billsUI extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new billsUI().setVisible(true);
+                new maintainmeDesktopUI().setVisible(true);
             }
         });
     }
