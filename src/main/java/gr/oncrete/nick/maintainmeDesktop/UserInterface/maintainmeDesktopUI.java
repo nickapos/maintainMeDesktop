@@ -136,16 +136,8 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         incomeActionComboBox = new javax.swing.JComboBox();
         jLabel16 = new javax.swing.JLabel();
         incomeIDTextField = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        incomeCompanyComboBox = new javax.swing.JComboBox();
         jLabel14 = new javax.swing.JLabel();
         incomeDateTextField = new javax.swing.JTextField();
-        foreignCurrencySelPanel1 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        foreignCurrencyCheckBox1 = new javax.swing.JCheckBox();
-        foreignCurrencyValuePanel1 = new javax.swing.JPanel();
-        foreignCurrencyTextField1 = new javax.swing.JTextField();
-        showRatesFrameButton1 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         incomeAmountTextField = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
@@ -159,8 +151,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         companyDetailsIDTextField = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
         catComboBox = new javax.swing.JComboBox();
-        jLabel10 = new javax.swing.JLabel();
-        companyDetailsAfmTextField = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         companyDetailsCNameTextField = new javax.swing.JTextField();
         companyRetrieveButton = new javax.swing.JButton();
@@ -190,23 +180,15 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         exportCSVsMenuItem = new javax.swing.JMenuItem();
         exportCVSYear = new javax.swing.JMenuItem();
         exportCVSPeriod = new javax.swing.JMenuItem();
-        exportQIF = new javax.swing.JMenuItem();
         emptyDBMenyItem = new javax.swing.JMenu();
         emptyDBMenuItem = new javax.swing.JMenuItem();
         executeSqlMenuItem = new javax.swing.JMenuItem();
         shutdownMenuItem = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         validateVatMenuItem = new javax.swing.JMenuItem();
-        manageCategoriesMenuItem = new javax.swing.JMenuItem();
         mergeOperationsJMenu = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
-        changeDBCurrencyMenuItem = new javax.swing.JMenuItem();
-        calculateAmortizationMenuItem = new javax.swing.JMenuItem();
-        presentTransactionsPerCompanyMenuItem = new javax.swing.JMenuItem();
-        invertRecordMenuItem = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle"); // NOI18N
@@ -333,7 +315,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
         tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditBillPanel.TabConstraints.tabTitle"), InsertEditBillPanel); // NOI18N
 
-        InsertEditIncome.setLayout(new java.awt.GridLayout(8, 2));
+        InsertEditIncome.setLayout(new java.awt.GridLayout(6, 2));
 
         jLabel13.setText(bundle.getString("maintainmeDesktopUI.jLabel13.text")); // NOI18N
         InsertEditIncome.add(jLabel13);
@@ -357,48 +339,11 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         });
         InsertEditIncome.add(incomeIDTextField);
 
-        jLabel17.setText(bundle.getString("maintainmeDesktopUI.jLabel17.text")); // NOI18N
-        InsertEditIncome.add(jLabel17);
-
-        incomeCompanyComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
-        InsertEditIncome.add(incomeCompanyComboBox);
-
         jLabel14.setText(bundle.getString("maintainmeDesktopUI.jLabel14.text")); // NOI18N
         InsertEditIncome.add(jLabel14);
 
         incomeDateTextField.setText(today.getToday());
         InsertEditIncome.add(incomeDateTextField);
-
-        foreignCurrencySelPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel24.setText(bundle.getString("maintainmeDesktopUI.jLabel24.text")); // NOI18N
-        foreignCurrencySelPanel1.add(jLabel24);
-
-        foreignCurrencyCheckBox1.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyCheckBox1.text")); // NOI18N
-        foreignCurrencyCheckBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                foreignCurrencyCheckBox1ActionPerformed(evt);
-            }
-        });
-        foreignCurrencySelPanel1.add(foreignCurrencyCheckBox1);
-
-        InsertEditIncome.add(foreignCurrencySelPanel1);
-
-        foreignCurrencyValuePanel1.setLayout(new javax.swing.BoxLayout(foreignCurrencyValuePanel1, javax.swing.BoxLayout.LINE_AXIS));
-
-        foreignCurrencyTextField1.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyTextField1.text")); // NOI18N
-        foreignCurrencyTextField1.setEnabled(false);
-        foreignCurrencyValuePanel1.add(foreignCurrencyTextField1);
-
-        showRatesFrameButton1.setText(bundle.getString("maintainmeDesktopUI.showRatesFrameButton1.text")); // NOI18N
-        showRatesFrameButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showRatesFrameButton1ActionPerformed(evt);
-            }
-        });
-        foreignCurrencyValuePanel1.add(showRatesFrameButton1);
-
-        InsertEditIncome.add(foreignCurrencyValuePanel1);
 
         jLabel15.setText(bundle.getString("maintainmeDesktopUI.jLabel15.text")); // NOI18N
         InsertEditIncome.add(jLabel15);
@@ -434,7 +379,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
         tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditIncome.TabConstraints.tabTitle"), InsertEditIncome); // NOI18N
 
-        InsertEditCompanyPanel.setLayout(new java.awt.GridLayout(6, 2));
+        InsertEditCompanyPanel.setLayout(new java.awt.GridLayout(5, 2));
 
         jLabel5.setText(bundle.getString("maintainmeDesktopUI.jLabel5.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel5);
@@ -458,10 +403,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
         catComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCategoriesCombo()));
         InsertEditCompanyPanel.add(catComboBox);
-
-        jLabel10.setText(bundle.getString("maintainmeDesktopUI.jLabel10.text")); // NOI18N
-        InsertEditCompanyPanel.add(jLabel10);
-        InsertEditCompanyPanel.add(companyDetailsAfmTextField);
 
         jLabel12.setText(bundle.getString("maintainmeDesktopUI.jLabel12.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel12);
@@ -635,14 +576,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         });
         exportMenu.add(exportCVSPeriod);
 
-        exportQIF.setText(bundle.getString("maintainmeDesktopUI.exportQIF.text")); // NOI18N
-        exportQIF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exportQIFActionPerformed(evt);
-            }
-        });
-        exportMenu.add(exportQIF);
-
         jMenu1.add(exportMenu);
 
         emptyDBMenyItem.setText(bundle.getString("maintainmeDesktopUI.emptyDBMenyItem.text")); // NOI18N
@@ -691,14 +624,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         });
         jMenu3.add(validateVatMenuItem);
 
-        manageCategoriesMenuItem.setText(bundle.getString("maintainmeDesktopUI.manageCategoriesMenuItem.text")); // NOI18N
-        manageCategoriesMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageCategoriesMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu3.add(manageCategoriesMenuItem);
-
         mergeOperationsJMenu.setText(bundle.getString("maintainmeDesktopUI.mergeOperationsJMenu.text")); // NOI18N
 
         jMenuItem9.setText(bundle.getString("maintainmeDesktopUI.jMenuItem9.text")); // NOI18N
@@ -719,51 +644,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
         jMenu3.add(mergeOperationsJMenu);
 
-        changeDBCurrencyMenuItem.setText(bundle.getString("maintainmeDesktopUI.changeDBCurrencyMenuItem.text")); // NOI18N
-        changeDBCurrencyMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changeDBCurrencyMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu3.add(changeDBCurrencyMenuItem);
-
-        calculateAmortizationMenuItem.setText(bundle.getString("maintainmeDesktopUI.calculateAmortizationMenuItem.text")); // NOI18N
-        calculateAmortizationMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                calculateAmortizationMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu3.add(calculateAmortizationMenuItem);
-
-        presentTransactionsPerCompanyMenuItem.setText(bundle.getString("maintainmeDesktopUI.presentTransactionsPerCompanyMenuItem.text")); // NOI18N
-        presentTransactionsPerCompanyMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                presentTransactionsPerCompanyMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu3.add(presentTransactionsPerCompanyMenuItem);
-
-        invertRecordMenuItem.setText(bundle.getString("maintainmeDesktopUI.invertRecordMenuItem.text")); // NOI18N
-        invertRecordMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                invertRecordMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu3.add(invertRecordMenuItem);
-
         jMenuBar1.add(jMenu3);
-
-        jMenu2.setText(bundle.getString("maintainmeDesktopUI.jMenu2.text")); // NOI18N
-
-        aboutMenuItem.setText(bundle.getString("maintainmeDesktopUI.aboutMenuItem.text")); // NOI18N
-        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aboutMenuItemActionPerformed(evt);
-            }
-        });
-        jMenu2.add(aboutMenuItem);
-
-        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -1005,12 +886,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_incomeRetrieveButtonActionPerformed
 
-    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
-        AboutWindow a = new AboutWindow();
-        a.setAbout();
-        a.runAbout();
-    }//GEN-LAST:event_aboutMenuItemActionPerformed
-
     private void executeSqlMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_executeSqlMenuItemActionPerformed
         ExecuteSqlWindow e = new ExecuteSqlWindow();
         e.runExecuteSqlCommand();
@@ -1025,11 +900,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         ExportCSVByYear exp = new ExportCSVByYear();
         exp.displayGUI();
     }//GEN-LAST:event_exportCVSYearActionPerformed
-
-    private void manageCategoriesMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCategoriesMenuItemActionPerformed
-        ManageCategoriesFrame m = new ManageCategoriesFrame(catComboBox);
-        m.displayApp();
-    }//GEN-LAST:event_manageCategoriesMenuItemActionPerformed
 
     private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
         // TODO add your handling code here:
@@ -1102,21 +972,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         exrf.presentExchangeRateFrame();
     }//GEN-LAST:event_showRatesFrameButtonActionPerformed
 
-    private void changeDBCurrencyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changeDBCurrencyMenuItemActionPerformed
-        ConvertToNewCurrencyFrame cv = new ConvertToNewCurrencyFrame();
-        cv.showFrame();
-    }//GEN-LAST:event_changeDBCurrencyMenuItemActionPerformed
-
-    private void calculateAmortizationMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateAmortizationMenuItemActionPerformed
-        CalculateAmortizationFrame calcAmor = new CalculateAmortizationFrame();
-        calcAmor.calcAmortization();
-    }//GEN-LAST:event_calculateAmortizationMenuItemActionPerformed
-
-    private void presentTransactionsPerCompanyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_presentTransactionsPerCompanyMenuItemActionPerformed
-        PresentTransactionsPerCompany tp = new PresentTransactionsPerCompany();
-        tp.displayApp();
-    }//GEN-LAST:event_presentTransactionsPerCompanyMenuItemActionPerformed
-
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         MergeCategoriesFrame mc = new MergeCategoriesFrame();
         mc.displayApp();
@@ -1130,26 +985,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void billCommentTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billCommentTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_billCommentTextFieldActionPerformed
-
-    private void showRatesFrameButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showRatesFrameButton1ActionPerformed
-        ExchangeRatesFrame exrf = new ExchangeRatesFrame(foreignCurrencyTextField, foreignCurrencyTextField1);
-        exrf.presentExchangeRateFrame();
-    }//GEN-LAST:event_showRatesFrameButton1ActionPerformed
-
-    private void foreignCurrencyCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foreignCurrencyCheckBox1ActionPerformed
-        //if the checkbox is selected enable the foreun currency text field. other wise disable it
-        if (this.foreignCurrencyCheckBox1.isSelected()) {
-            this.foreignCurrencyTextField1.setEnabled(true);
-        } else {
-            this.foreignCurrencyTextField1.setEnabled(false);
-        }        // TODO add your handling code here:
-    }//GEN-LAST:event_foreignCurrencyCheckBox1ActionPerformed
-
-    private void invertRecordMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invertRecordMenuItemActionPerformed
-
-        InvertRecordWindow invr = new InvertRecordWindow();
-        invr.showInvertRecord();
-    }//GEN-LAST:event_invertRecordMenuItemActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
@@ -1171,11 +1006,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         companyDetailsAfmTextField.setText(afm);
     }//GEN-LAST:event_companyDetailsCNameTextFieldKeyReleased
 
-    private void exportQIFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportQIFActionPerformed
-        ExportAllRecordsQIF exp = new ExportAllRecordsQIF();
-        exp.displayGUI();        
-    }//GEN-LAST:event_exportQIFActionPerformed
-
     private void exportCVSPeriodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportCVSPeriodActionPerformed
         ExportCSVByPeriod cvsp = new ExportCSVByPeriod();
         cvsp.displayGUI();
@@ -1196,17 +1026,13 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JPanel InsertEditCompanyPanel;
     private javax.swing.JPanel InsertEditIncome;
     private javax.swing.JPanel ReportsPanel;
-    private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JTextField billAmountTextField;
     private javax.swing.JTextField billCommentTextField;
     private javax.swing.JButton billGoButton;
     private javax.swing.JTextField billIdTextField;
     private javax.swing.JComboBox billInsertEditCompanyNameComboBox;
     private javax.swing.JButton billRetrieveButton;
-    private javax.swing.JMenuItem calculateAmortizationMenuItem;
     private javax.swing.JComboBox catComboBox;
-    private javax.swing.JMenuItem changeDBCurrencyMenuItem;
-    private javax.swing.JTextField companyDetailsAfmTextField;
     private javax.swing.JTextField companyDetailsCNameTextField;
     private javax.swing.JComboBox companyDetailsComboBox;
     private javax.swing.JButton companyDetailsGoButton;
@@ -1222,37 +1048,28 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem exportCVSYear;
     private javax.swing.JMenuItem exportDBMenuItem;
     private javax.swing.JMenu exportMenu;
-    private javax.swing.JMenuItem exportQIF;
     private javax.swing.JCheckBox foreignCurrencyCheckBox;
-    private javax.swing.JCheckBox foreignCurrencyCheckBox1;
     private javax.swing.JPanel foreignCurrencySelPanel;
-    private javax.swing.JPanel foreignCurrencySelPanel1;
     private javax.swing.JTextField foreignCurrencyTextField;
-    private javax.swing.JTextField foreignCurrencyTextField1;
     private javax.swing.JPanel foreignCurrencyValuePanel;
-    private javax.swing.JPanel foreignCurrencyValuePanel1;
     private javax.swing.JPanel goPanel;
     private javax.swing.JMenu importMenu;
     private javax.swing.JComboBox incomeActionComboBox;
     private javax.swing.JTextField incomeAmountTextField;
     private javax.swing.JTextField incomeCommentTextField;
-    private javax.swing.JComboBox incomeCompanyComboBox;
     private javax.swing.JTextField incomeDateTextField;
     private javax.swing.JButton incomeGoButton;
     private javax.swing.JTextField incomeIDTextField;
     private javax.swing.JButton incomeRetrieveButton;
     private javax.swing.JComboBox inserEditBillComboBox;
-    private javax.swing.JMenuItem invertRecordMenuItem;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -1260,7 +1077,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1269,7 +1085,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
@@ -1277,9 +1092,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JMenuItem manageCategoriesMenuItem;
     private javax.swing.JMenu mergeOperationsJMenu;
-    private javax.swing.JMenuItem presentTransactionsPerCompanyMenuItem;
     private javax.swing.JButton reportButton;
     private javax.swing.JComboBox reportComboBox;
     private javax.swing.JPanel reportPanel;
@@ -1288,7 +1101,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JComboBox reportParametersFinalComboBox;
     private javax.swing.JTable reportTable;
     private javax.swing.JButton showRatesFrameButton;
-    private javax.swing.JButton showRatesFrameButton1;
     private javax.swing.JMenuItem shutdownMenuItem;
     private javax.swing.JTabbedPane tabs;
     private javax.swing.JMenuItem validateVatMenuItem;
