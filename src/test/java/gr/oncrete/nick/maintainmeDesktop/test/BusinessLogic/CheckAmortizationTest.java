@@ -16,7 +16,7 @@
  */
 package gr.oncrete.nick.maintainmeDesktop.test.BusinessLogic;
 
-import gr.oncrete.nick.mybill.businesslogic.Amortization;
+import gr.oncrete.nick.maintainmeDesktop.BusinessLogic.Amortization;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

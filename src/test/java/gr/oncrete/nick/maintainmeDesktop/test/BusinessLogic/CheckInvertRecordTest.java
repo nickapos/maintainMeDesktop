@@ -16,7 +16,7 @@
  */
 package gr.oncrete.nick.maintainmeDesktop.test.BusinessLogic;
 
-import gr.oncrete.nick.mybill.businesslogic.InvertRecord;
+import gr.oncrete.nick.maintainmeDesktop.BusinessLogic.InvertRecord;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

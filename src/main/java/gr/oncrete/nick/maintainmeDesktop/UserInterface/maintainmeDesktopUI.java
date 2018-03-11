@@ -75,19 +75,20 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     PlotPanel plPanel;
     Today today = new Today();
     ArrayList<String[]> currentReport;//a report table used in save report as txt
-    String[] comboBoxActions = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INSERT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EDIT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DELETE")};//the dropdown list at the action combo boxes
-    String[] comboBoxReports = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANIES"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("BILLS"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES-PER-COMPANY-FOR-ALL-YEARS"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES-AMOUNT-PER-COMPANY-BY-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES-AMOUNT-PER-MONTH-BY-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME-FOR-ALL-YEARS"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME-BY-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME-AMOUNT-PER-MONTH-BY-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME-EXPENSES-MONTH-PER-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES-PER-CATEGORY-FOR-ALL-YEARS"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES-PER-CATEGORY-PER-YEAR"),
-        java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPARE-TWO-YEAR_EXPENCES-PER-CATEGORY")};//the labels of the reports
+    String[] comboBoxActions = {"Isert","Edit","Delete"};//the dropdown list at the action combo boxes
+    String[] comboBoxReports = {"COMPANIES", 
+        "BILLS",
+        "EXPENSES-PER-COMPANY-FOR-ALL-YEARS",
+        "EXPENSES-AMOUNT-PER-COMPANY-BY-YEAR",
+        "EXPENSES-AMOUNT-PER-MONTH-BY-YEAR",
+        "INCOME",
+        "INCOME-FOR-ALL-YEARS",
+        "INCOME-BY-YEAR",
+        "INCOME-AMOUNT-PER-MONTH-BY-YEAR",
+        "INCOME-EXPENSES-MONTH-PER-YEAR",
+        "EXPENSES-PER-CATEGORY-FOR-ALL-YEARS",
+        "EXPENSES-PER-CATEGORY-PER-YEAR",
+        "COMPARE-TWO-YEAR_EXPENCES-PER-CATEGORY"};//the labels of the reports
 
     /**
      * Creates new form billsUI
@@ -115,16 +116,8 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         billIdTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         billInsertEditCompanyNameComboBox = new javax.swing.JComboBox();
-        jLabel2 = new javax.swing.JLabel();
-        dateOfIssueTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         dateOfPaymentTextField = new javax.swing.JTextField();
-        foreignCurrencySelPanel = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        foreignCurrencyCheckBox = new javax.swing.JCheckBox();
-        foreignCurrencyValuePanel = new javax.swing.JPanel();
-        foreignCurrencyTextField = new javax.swing.JTextField();
-        showRatesFrameButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         billAmountTextField = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
@@ -195,7 +188,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         setTitle(bundle.getString("maintainmeDesktopUI.title")); // NOI18N
 
         InsertEditBillPanel.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
-        InsertEditBillPanel.setLayout(new java.awt.GridLayout(9, 2, 1, 1));
+        InsertEditBillPanel.setLayout(new java.awt.GridLayout(7, 2, 1, 1));
 
         jLabel8.setText(bundle.getString("maintainmeDesktopUI.jLabel8.text")); // NOI18N
         InsertEditBillPanel.add(jLabel8);
@@ -225,55 +218,12 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         billInsertEditCompanyNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
         InsertEditBillPanel.add(billInsertEditCompanyNameComboBox);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel2.setText(bundle.getString("maintainmeDesktopUI.jLabel2.text")); // NOI18N
-        InsertEditBillPanel.add(jLabel2);
-
-        dateOfIssueTextField.setText(today.getToday());
-        dateOfIssueTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateOfIssueTextFieldActionPerformed(evt);
-            }
-        });
-        InsertEditBillPanel.add(dateOfIssueTextField);
-
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(bundle.getString("maintainmeDesktopUI.jLabel3.text")); // NOI18N
         InsertEditBillPanel.add(jLabel3);
 
         dateOfPaymentTextField.setText(today.getToday());
         InsertEditBillPanel.add(dateOfPaymentTextField);
-
-        foreignCurrencySelPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
-
-        jLabel19.setText(bundle.getString("maintainmeDesktopUI.jLabel19.text")); // NOI18N
-        foreignCurrencySelPanel.add(jLabel19);
-
-        foreignCurrencyCheckBox.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyCheckBox.text")); // NOI18N
-        foreignCurrencyCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                foreignCurrencyCheckBoxActionPerformed(evt);
-            }
-        });
-        foreignCurrencySelPanel.add(foreignCurrencyCheckBox);
-
-        InsertEditBillPanel.add(foreignCurrencySelPanel);
-
-        foreignCurrencyValuePanel.setLayout(new javax.swing.BoxLayout(foreignCurrencyValuePanel, javax.swing.BoxLayout.LINE_AXIS));
-
-        foreignCurrencyTextField.setText(bundle.getString("maintainmeDesktopUI.foreignCurrencyTextField.text")); // NOI18N
-        foreignCurrencyTextField.setEnabled(false);
-        foreignCurrencyValuePanel.add(foreignCurrencyTextField);
-
-        showRatesFrameButton.setText(bundle.getString("maintainmeDesktopUI.showRatesFrameButton.text")); // NOI18N
-        showRatesFrameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showRatesFrameButtonActionPerformed(evt);
-            }
-        });
-        foreignCurrencyValuePanel.add(showRatesFrameButton);
-
-        InsertEditBillPanel.add(foreignCurrencyValuePanel);
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText(bundle.getString("maintainmeDesktopUI.jLabel4.text")); // NOI18N
@@ -693,29 +643,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }//GEN-LAST:event_inserEditBillComboBoxActionPerformed
 
     private void companyDetailsComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyDetailsComboBoxActionPerformed
-        int a = this.companyDetailsComboBox.getSelectedIndex();
-        if (a == 0)//if selected value is insert
-        {
-            this.companyDetailsIDTextField.setEditable(false);
-            this.companyRetrieveButton.setEnabled(false);
-            this.companyDetailsAfmTextField.setEditable(true);
-            this.companyDetailsCNameTextField.setEditable(true);
-
-        } else if (a == 1)//if selected value is edit
-        {
-
-            this.companyDetailsIDTextField.setEditable(true);
-            this.companyDetailsAfmTextField.setEditable(true);
-            this.companyDetailsCNameTextField.setEditable(true);
-            this.companyRetrieveButton.setEnabled(true);
-
-        } else if (a == 2)//if selected value is delete
-        {
-            this.companyDetailsIDTextField.setEditable(true);
-            this.companyDetailsAfmTextField.setEditable(false);
-            this.companyDetailsCNameTextField.setEditable(false);
-            this.companyRetrieveButton.setEnabled(true);
-        }
+        
     }//GEN-LAST:event_companyDetailsComboBoxActionPerformed
 
     private void companyDetailsGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyDetailsGoButtonActionPerformed
@@ -723,42 +651,11 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }//GEN-LAST:event_companyDetailsGoButtonActionPerformed
 
     private void companyRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyRetrieveButtonActionPerformed
-        int a = this.companyDetailsComboBox.getSelectedIndex();
-
-        if (a == 1 || a == 2)//if selected value is edit or delete
-        {
-            String id = this.companyDetailsIDTextField.getText();
-            //System.out.println("id is "+id);
-            if (id.length() > 0) {
-                SelectCompanyDetails z = new SelectCompanyDetails();
-                z.SelectCompanyDetailsWithID(id);
-                if (z.resultsExist()) {
-                    this.companyDetailsAfmTextField.setText(z.getAfm());
-                    this.companyDetailsCNameTextField.setText(z.getName());
-                    Category categ = new Category();
-                    categ.selectCatById(z.getCatID());
-                    if (categ.getCatName().length() > 0) {
-                        this.catComboBox.setSelectedItem(categ.getCatName());
-                    }
-                }
-            }
-        }
-
+       
     }//GEN-LAST:event_companyRetrieveButtonActionPerformed
 
     private void billRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billRetrieveButtonActionPerformed
-        String bid = billIdTextField.getText();
-        SelectBillDetails bill = new SelectBillDetails();
-        bill.SelectBillDetailsWithID(bid);
-        if (bill.resultsExist()) {
-            dateOfIssueTextField.setText(bill.getDateOfIssue());
-            dateOfPaymentTextField.setText(bill.getDateOfPayment());
-            billAmountTextField.setText(bill.getPrice());
-            SelectCompanyDetails comp = new SelectCompanyDetails();
-            comp.SelectCompanyDetailsWithID(bill.getCID());
-            billInsertEditCompanyNameComboBox.setSelectedItem(comp.getName());
-            billCommentTextField.setText(bill.getComment());
-        }
+      
     }//GEN-LAST:event_billRetrieveButtonActionPerformed
 
     private void reportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportButtonActionPerformed
@@ -873,17 +770,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }//GEN-LAST:event_incomeGoButtonActionPerformed
 
     private void incomeRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeRetrieveButtonActionPerformed
-        String inid = incomeIDTextField.getText();
-        SelectIncomeDetails income = new SelectIncomeDetails();
-        income.SelectBillDetailsWithID(inid);
-        if (income.resultsExist()) {
-            incomeDateTextField.setText(income.getDateOfPayment());
-            incomeAmountTextField.setText(income.getAmount());
-            SelectCompanyDetails comp = new SelectCompanyDetails();
-            comp.SelectCompanyDetailsWithID(income.getCID());
-            incomeCompanyComboBox.setSelectedItem(comp.getName());
-            incomeCommentTextField.setText(income.getComment());
-        }
+        
     }//GEN-LAST:event_incomeRetrieveButtonActionPerformed
 
     private void executeSqlMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_executeSqlMenuItemActionPerformed
@@ -937,10 +824,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         // System.out.println(outStr);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void dateOfIssueTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateOfIssueTextFieldActionPerformed
-        dateOfPaymentTextField.setText(dateOfIssueTextField.getText());
-    }//GEN-LAST:event_dateOfIssueTextFieldActionPerformed
-
     private void billAmountTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billAmountTextFieldActionPerformed
         this.billAction();
     }//GEN-LAST:event_billAmountTextFieldActionPerformed
@@ -952,25 +835,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void companyDetailsCNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyDetailsCNameTextFieldActionPerformed
         this.insertCompanyAction();
     }//GEN-LAST:event_companyDetailsCNameTextFieldActionPerformed
-
-    private void foreignCurrencyCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_foreignCurrencyCheckBoxActionPerformed
-
-        //if the checkbox is selected enable the foreun currency text field. other wise disable it
-        if (this.foreignCurrencyCheckBox.isSelected()) {
-            this.foreignCurrencyTextField.setEnabled(true);
-            this.foreignCurrencyTextField.setEditable(true);
-        } else {
-            this.foreignCurrencyTextField.setEnabled(false);
-            this.foreignCurrencyTextField.setEditable(false);
-        }
-    }//GEN-LAST:event_foreignCurrencyCheckBoxActionPerformed
-
-    private void showRatesFrameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showRatesFrameButtonActionPerformed
-        //Textratestextfield foreignCurrencyTextField
-        //foreignCurrencyCheckBox
-        ExchangeRatesFrame exrf = new ExchangeRatesFrame(foreignCurrencyTextField, foreignCurrencyTextField1);
-        exrf.presentExchangeRateFrame();
-    }//GEN-LAST:event_showRatesFrameButtonActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         MergeCategoriesFrame mc = new MergeCategoriesFrame();
@@ -993,17 +857,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void companyDetailsCNameTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_companyDetailsCNameTextFieldKeyReleased
-        // TODO add your handling code here://System.out.println("descComp: "+descCompName+" and its hash code is: "+descCompName.hashCode());
-        //Making sure afm is less than 9 digits, while allowing for smaller numbers to be allowed without problem
-        String descCompName=companyDetailsCNameTextField.getText();
-        String afmFull = Integer.toString(descCompName.hashCode());
-        String afm = "";
-        if (afmFull.length() > 9) {
-            afm = afmFull.substring(0, 9);
-        } else {
-            afm = afmFull;
-        }
-        companyDetailsAfmTextField.setText(afm);
+      
     }//GEN-LAST:event_companyDetailsCNameTextFieldKeyReleased
 
     private void exportCVSPeriodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportCVSPeriodActionPerformed
@@ -1038,7 +892,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JButton companyDetailsGoButton;
     private javax.swing.JTextField companyDetailsIDTextField;
     private javax.swing.JButton companyRetrieveButton;
-    private javax.swing.JTextField dateOfIssueTextField;
     private javax.swing.JTextField dateOfPaymentTextField;
     private javax.swing.JMenuItem emptyDBMenuItem;
     private javax.swing.JMenu emptyDBMenyItem;
@@ -1048,10 +901,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem exportCVSYear;
     private javax.swing.JMenuItem exportDBMenuItem;
     private javax.swing.JMenu exportMenu;
-    private javax.swing.JCheckBox foreignCurrencyCheckBox;
-    private javax.swing.JPanel foreignCurrencySelPanel;
-    private javax.swing.JTextField foreignCurrencyTextField;
-    private javax.swing.JPanel foreignCurrencyValuePanel;
     private javax.swing.JPanel goPanel;
     private javax.swing.JMenu importMenu;
     private javax.swing.JComboBox incomeActionComboBox;
@@ -1071,8 +920,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1100,7 +947,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JComboBox reportParametersComboBox;
     private javax.swing.JComboBox reportParametersFinalComboBox;
     private javax.swing.JTable reportTable;
-    private javax.swing.JButton showRatesFrameButton;
     private javax.swing.JMenuItem shutdownMenuItem;
     private javax.swing.JTabbedPane tabs;
     private javax.swing.JMenuItem validateVatMenuItem;
@@ -1114,7 +960,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void clearBillTextFields() {
         billAmountTextField.setText("");
         billIdTextField.setText("");
-        dateOfIssueTextField.setText(today.getToday());
         dateOfPaymentTextField.setText(today.getToday());
         billCommentTextField.setText("");
 
@@ -1128,7 +973,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }
 
     private void clearCompanyTextFields() {
-        companyDetailsAfmTextField.setText("");
         companyDetailsIDTextField.setText("");
         companyDetailsCNameTextField.setText("");
         //refresh the combobox
@@ -1142,7 +986,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      */
     public void refreshCompaniesCombo() {
         billInsertEditCompanyNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
-        incomeCompanyComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
+       
     }
 
     /**
@@ -1698,42 +1542,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      * value of the bill tab
      */
     private void billAction() {
-        String billAmt = billAmountTextField.getText().replaceAll(",", ".");
-        if (this.foreignCurrencyCheckBox.isSelected() && !this.foreignCurrencyTextField.getText().equals("")) {
-            String exchangeRate = this.foreignCurrencyTextField.getText().replaceAll(",", ".");
-            billAmt = "" + Double.parseDouble(billAmt) * Double.parseDouble(exchangeRate);
-        }
-        int a = this.inserEditBillComboBox.getSelectedIndex();
-        String company = (String) billInsertEditCompanyNameComboBox.getSelectedItem();
-        String dofi = dateOfIssueTextField.getText();
-        String dop = dateOfPaymentTextField.getText();
-        String comment = billCommentTextField.getText();
-        if (a == 0)//if selected value is insert
-        {
-            if (dop.length() > 0 && dofi.length() > 0 && billAmt.length() > 0 && company.length() > 0) {
-                InsertBills ins = new InsertBills(company, billAmt, dofi, dop, comment);
-                this.clearBillTextFields();
-            }
-
-        } else if (a == 1)//if selected value is edit
-        {
-
-            String bid = billIdTextField.getText();
-
-            if (bid.length() > 0 && dop.length() > 0 && dofi.length() > 0 && billAmt.length() > 0 && company.length() > 0) {
-                UpdateBillRecord u = new UpdateBillRecord(bid, company, billAmt, dofi, dop, comment);
-                this.clearBillTextFields();
-            }
-
-        } else if (a == 2)//if selected value is delete
-        {
-            String bid = billIdTextField.getText();
-            if (bid.length() > 0) {
-                DeleteBill del = new DeleteBill(bid);
-                this.clearBillTextFields();
-            }
-
-        }
+        
     }
 
     /**
@@ -1741,39 +1550,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      * tab or if he hits enter in the amount field
      */
     private void incomeAction() {
-        String amt = incomeAmountTextField.getText().replaceAll(",", ".");
-
-        if (this.foreignCurrencyCheckBox1.isSelected() && !this.foreignCurrencyTextField1.getText().equals("")) {
-            String exchangeRate = this.foreignCurrencyTextField1.getText().replaceAll(",", ".");
-            amt = "" + Double.parseDouble(amt) * Double.parseDouble(exchangeRate);
-        }
-
-        int a = this.incomeActionComboBox.getSelectedIndex();
-        String company = (String) incomeCompanyComboBox.getSelectedItem();
-        String dop = incomeDateTextField.getText();
-        String comment = incomeCommentTextField.getText();
-        if (a == 0)//if selected value is insert
-        {
-            if (dop.length() > 0 && amt.length() > 0 && company.length() > 0) {
-                InsertIncome ins = new InsertIncome(company, amt, dop, comment);
-                this.clearIncomeTextFields();
-            }
-        } else if (a == 1)//if selected value is edit
-        {
-            String inid = incomeIDTextField.getText();
-            if (inid.length() > 0 && dop.length() > 0 && amt.length() > 0 && company.length() > 0) {
-                UpdateIncomeRecord u = new UpdateIncomeRecord(inid, company, amt, dop, comment);
-                this.clearIncomeTextFields();
-            }
-        } else if (a == 2)//if selected value is delete
-        {
-            String inid = incomeIDTextField.getText();
-            if (inid.length() > 0) {
-                DeleteIncome del = new DeleteIncome(inid);
-                this.clearIncomeTextFields();
-            }
-
-        }
+        
     }
 
     /**
@@ -1781,44 +1558,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      * at the company name textfield
      */
     private void insertCompanyAction() {
-
-        int a = this.companyDetailsComboBox.getSelectedIndex();
-        if (a == 0)//if selected value is insert
-        {
-            String cAfm = companyDetailsAfmTextField.getText();
-            String cName = companyDetailsCNameTextField.getText();
-            String catName = (String) catComboBox.getSelectedItem();
-
-            InsertCompany u = new InsertCompany();
-            if (catName != null) {//if the category is not null
-                Category categ = new Category();
-                categ.selectCatByName(catName);
-                u.insertCompany(cName, cAfm, categ.getCatID());
-            } else {//if the category is null
-                u.insertCompany(cName, cAfm, "null");
-            }
-
-            this.clearCompanyTextFields();
-
-        } else if (a == 1)//if selected value is edit
-        {
-            String cAfm = companyDetailsAfmTextField.getText();
-            String cName = companyDetailsCNameTextField.getText();
-            String cid = companyDetailsIDTextField.getText();
-            String catName = (String) catComboBox.getSelectedItem();
-            Category categ = new Category();
-            categ.selectCatByName(catName);
-            if (cid.length() > 0 && cAfm.length() > 0 && cName.length() > 0 && categ.getCatID().length() > 0) {
-                UpdateCompanyRecord u = new UpdateCompanyRecord(cid, cName, cAfm, categ.getCatID());
-                this.clearCompanyTextFields();
-            }
-
-        } else if (a == 2)//if selected value is delete
-        {
-            String id = this.companyDetailsIDTextField.getText();
-            DeleteCompany d = new DeleteCompany(id);
-            this.clearCompanyTextFields();
-        }
 
     }
 }
