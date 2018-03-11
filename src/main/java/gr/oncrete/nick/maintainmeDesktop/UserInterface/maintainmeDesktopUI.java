@@ -110,44 +110,42 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
         tabs = new javax.swing.JTabbedPane();
         InsertEditBillPanel = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        inserEditBillComboBox = new javax.swing.JComboBox();
+        actionLabel = new javax.swing.JLabel();
+        inserEditMaintenanceComboBox = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
-        billIdTextField = new javax.swing.JTextField();
+        maintenanceTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        billInsertEditCompanyNameComboBox = new javax.swing.JComboBox();
+        InsertEditMaintenanceTypePerPropertyComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         dateOfPaymentTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        billAmountTextField = new javax.swing.JTextField();
+        maintenanceAmountTextField = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        billCommentTextField = new javax.swing.JTextField();
-        billRetrieveButton = new javax.swing.JButton();
-        billGoButton = new javax.swing.JButton();
+        maintenanceCommentTextField = new javax.swing.JTextField();
+        maintenanceRetrieveButton = new javax.swing.JButton();
+        maintenanceGoButton = new javax.swing.JButton();
         InsertEditIncome = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         incomeActionComboBox = new javax.swing.JComboBox();
         jLabel16 = new javax.swing.JLabel();
-        incomeIDTextField = new javax.swing.JTextField();
+        maintenanceTypeIDTextField = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         incomeDateTextField = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         incomeAmountTextField = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
         incomeCommentTextField = new javax.swing.JTextField();
-        incomeRetrieveButton = new javax.swing.JButton();
-        incomeGoButton = new javax.swing.JButton();
+        maintenanceTypeRetrieveButton = new javax.swing.JButton();
+        maintenanceTypeGoButton = new javax.swing.JButton();
         InsertEditCompanyPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         companyDetailsComboBox = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
-        companyDetailsIDTextField = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
-        catComboBox = new javax.swing.JComboBox();
+        propertyIDTextField = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         companyDetailsCNameTextField = new javax.swing.JTextField();
-        companyRetrieveButton = new javax.swing.JButton();
-        companyDetailsGoButton = new javax.swing.JButton();
+        propertyRetrieveButton = new javax.swing.JButton();
+        propertyGoButton = new javax.swing.JButton();
         ReportsPanel = new javax.swing.JPanel();
         reportPanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -190,33 +188,33 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         InsertEditBillPanel.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
         InsertEditBillPanel.setLayout(new java.awt.GridLayout(7, 2, 1, 1));
 
-        jLabel8.setText(bundle.getString("maintainmeDesktopUI.jLabel8.text")); // NOI18N
-        InsertEditBillPanel.add(jLabel8);
+        actionLabel.setText(bundle.getString("maintainmeDesktopUI.actionLabel.text")); // NOI18N
+        InsertEditBillPanel.add(actionLabel);
 
-        inserEditBillComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxActions));
-        inserEditBillComboBox.addActionListener(new java.awt.event.ActionListener() {
+        inserEditMaintenanceComboBox.setModel(new javax.swing.DefaultComboBoxModel(comboBoxActions));
+        inserEditMaintenanceComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inserEditBillComboBoxActionPerformed(evt);
+                inserEditMaintenanceComboBoxActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(inserEditBillComboBox);
+        InsertEditBillPanel.add(inserEditMaintenanceComboBox);
 
         jLabel6.setText(bundle.getString("maintainmeDesktopUI.jLabel6.text")); // NOI18N
         InsertEditBillPanel.add(jLabel6);
 
-        billIdTextField.setEditable(false);
-        billIdTextField.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceTextField.setEditable(false);
+        maintenanceTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billIdTextFieldActionPerformed(evt);
+                maintenanceTextFieldActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(billIdTextField);
+        InsertEditBillPanel.add(maintenanceTextField);
 
         jLabel1.setText(bundle.getString("maintainmeDesktopUI.jLabel1.text")); // NOI18N
         InsertEditBillPanel.add(jLabel1);
 
-        billInsertEditCompanyNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
-        InsertEditBillPanel.add(billInsertEditCompanyNameComboBox);
+        InsertEditMaintenanceTypePerPropertyComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
+        InsertEditBillPanel.add(InsertEditMaintenanceTypePerPropertyComboBox);
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(bundle.getString("maintainmeDesktopUI.jLabel3.text")); // NOI18N
@@ -229,39 +227,39 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         jLabel4.setText(bundle.getString("maintainmeDesktopUI.jLabel4.text")); // NOI18N
         InsertEditBillPanel.add(jLabel4);
 
-        billAmountTextField.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceAmountTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billAmountTextFieldActionPerformed(evt);
+                maintenanceAmountTextFieldActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(billAmountTextField);
+        InsertEditBillPanel.add(maintenanceAmountTextField);
 
         jLabel22.setText(bundle.getString("maintainmeDesktopUI.jLabel22.text")); // NOI18N
         InsertEditBillPanel.add(jLabel22);
 
-        billCommentTextField.setText(bundle.getString("maintainmeDesktopUI.billCommentTextField.text")); // NOI18N
-        billCommentTextField.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceCommentTextField.setText(bundle.getString("maintainmeDesktopUI.maintenanceCommentTextField.text")); // NOI18N
+        maintenanceCommentTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billCommentTextFieldActionPerformed(evt);
+                maintenanceCommentTextFieldActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(billCommentTextField);
+        InsertEditBillPanel.add(maintenanceCommentTextField);
 
-        billRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.billRetrieveButton.text")); // NOI18N
-        billRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.maintenanceRetrieveButton.text")); // NOI18N
+        maintenanceRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billRetrieveButtonActionPerformed(evt);
+                maintenanceRetrieveButtonActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(billRetrieveButton);
+        InsertEditBillPanel.add(maintenanceRetrieveButton);
 
-        billGoButton.setText(bundle.getString("maintainmeDesktopUI.billGoButton.text")); // NOI18N
-        billGoButton.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceGoButton.setText(bundle.getString("maintainmeDesktopUI.maintenanceGoButton.text")); // NOI18N
+        maintenanceGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billGoButtonActionPerformed(evt);
+                maintenanceGoButtonActionPerformed(evt);
             }
         });
-        InsertEditBillPanel.add(billGoButton);
+        InsertEditBillPanel.add(maintenanceGoButton);
 
         tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditBillPanel.TabConstraints.tabTitle"), InsertEditBillPanel); // NOI18N
 
@@ -281,13 +279,13 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         jLabel16.setText(bundle.getString("maintainmeDesktopUI.jLabel16.text")); // NOI18N
         InsertEditIncome.add(jLabel16);
 
-        incomeIDTextField.setEditable(false);
-        incomeIDTextField.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceTypeIDTextField.setEditable(false);
+        maintenanceTypeIDTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                incomeIDTextFieldActionPerformed(evt);
+                maintenanceTypeIDTextFieldActionPerformed(evt);
             }
         });
-        InsertEditIncome.add(incomeIDTextField);
+        InsertEditIncome.add(maintenanceTypeIDTextField);
 
         jLabel14.setText(bundle.getString("maintainmeDesktopUI.jLabel14.text")); // NOI18N
         InsertEditIncome.add(jLabel14);
@@ -311,25 +309,25 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         incomeCommentTextField.setText(bundle.getString("maintainmeDesktopUI.incomeCommentTextField.text")); // NOI18N
         InsertEditIncome.add(incomeCommentTextField);
 
-        incomeRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.incomeRetrieveButton.text")); // NOI18N
-        incomeRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceTypeRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.maintenanceTypeRetrieveButton.text")); // NOI18N
+        maintenanceTypeRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                incomeRetrieveButtonActionPerformed(evt);
+                maintenanceTypeRetrieveButtonActionPerformed(evt);
             }
         });
-        InsertEditIncome.add(incomeRetrieveButton);
+        InsertEditIncome.add(maintenanceTypeRetrieveButton);
 
-        incomeGoButton.setText(bundle.getString("maintainmeDesktopUI.incomeGoButton.text")); // NOI18N
-        incomeGoButton.addActionListener(new java.awt.event.ActionListener() {
+        maintenanceTypeGoButton.setText(bundle.getString("maintainmeDesktopUI.maintenanceTypeGoButton.text")); // NOI18N
+        maintenanceTypeGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                incomeGoButtonActionPerformed(evt);
+                maintenanceTypeGoButtonActionPerformed(evt);
             }
         });
-        InsertEditIncome.add(incomeGoButton);
+        InsertEditIncome.add(maintenanceTypeGoButton);
 
         tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditIncome.TabConstraints.tabTitle"), InsertEditIncome); // NOI18N
 
-        InsertEditCompanyPanel.setLayout(new java.awt.GridLayout(5, 2));
+        InsertEditCompanyPanel.setLayout(new java.awt.GridLayout(4, 2));
 
         jLabel5.setText(bundle.getString("maintainmeDesktopUI.jLabel5.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel5);
@@ -345,14 +343,8 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         jLabel9.setText(bundle.getString("maintainmeDesktopUI.jLabel9.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel9);
 
-        companyDetailsIDTextField.setEditable(false);
-        InsertEditCompanyPanel.add(companyDetailsIDTextField);
-
-        jLabel18.setText(bundle.getString("maintainmeDesktopUI.jLabel18.text")); // NOI18N
-        InsertEditCompanyPanel.add(jLabel18);
-
-        catComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCategoriesCombo()));
-        InsertEditCompanyPanel.add(catComboBox);
+        propertyIDTextField.setEditable(false);
+        InsertEditCompanyPanel.add(propertyIDTextField);
 
         jLabel12.setText(bundle.getString("maintainmeDesktopUI.jLabel12.text")); // NOI18N
         InsertEditCompanyPanel.add(jLabel12);
@@ -369,21 +361,21 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         });
         InsertEditCompanyPanel.add(companyDetailsCNameTextField);
 
-        companyRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.companyRetrieveButton.text")); // NOI18N
-        companyRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
+        propertyRetrieveButton.setText(bundle.getString("maintainmeDesktopUI.propertyRetrieveButton.text")); // NOI18N
+        propertyRetrieveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                companyRetrieveButtonActionPerformed(evt);
+                propertyRetrieveButtonActionPerformed(evt);
             }
         });
-        InsertEditCompanyPanel.add(companyRetrieveButton);
+        InsertEditCompanyPanel.add(propertyRetrieveButton);
 
-        companyDetailsGoButton.setText(bundle.getString("maintainmeDesktopUI.companyDetailsGoButton.text")); // NOI18N
-        companyDetailsGoButton.addActionListener(new java.awt.event.ActionListener() {
+        propertyGoButton.setText(bundle.getString("maintainmeDesktopUI.propertyGoButton.text")); // NOI18N
+        propertyGoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                companyDetailsGoButtonActionPerformed(evt);
+                propertyGoButtonActionPerformed(evt);
             }
         });
-        InsertEditCompanyPanel.add(companyDetailsGoButton);
+        InsertEditCompanyPanel.add(propertyGoButton);
 
         tabs.addTab(bundle.getString("maintainmeDesktopUI.InsertEditCompanyPanel.TabConstraints.tabTitle"), InsertEditCompanyPanel); // NOI18N
 
@@ -612,51 +604,51 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void billGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billGoButtonActionPerformed
+    private void maintenanceGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceGoButtonActionPerformed
         this.billAction();
-    }//GEN-LAST:event_billGoButtonActionPerformed
+    }//GEN-LAST:event_maintenanceGoButtonActionPerformed
 
-    private void billIdTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billIdTextFieldActionPerformed
+    private void maintenanceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_billIdTextFieldActionPerformed
+    }//GEN-LAST:event_maintenanceTextFieldActionPerformed
 
-    private void inserEditBillComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserEditBillComboBoxActionPerformed
+    private void inserEditMaintenanceComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserEditMaintenanceComboBoxActionPerformed
         //an alaksei to status na vriskei to id kai analoga na thetei ta diafora values
         //kai na kanei ta kelia editable i mi.
-        int a = this.inserEditBillComboBox.getSelectedIndex();
+        int a = this.inserEditMaintenanceComboBox.getSelectedIndex();
         if (a == 0)//if selected value is insert
         {
-            this.billIdTextField.setEditable(false);
-            this.billRetrieveButton.setEnabled(false);
+            this.maintenanceTextField.setEditable(false);
+            this.maintenanceRetrieveButton.setEnabled(false);
 
         } else if (a == 1)//if selected value is edit
         {
 
-            this.billIdTextField.setEditable(true);
-            this.billRetrieveButton.setEnabled(true);
+            this.maintenanceTextField.setEditable(true);
+            this.maintenanceRetrieveButton.setEnabled(true);
 
         } else if (a == 2)//if selected value is delete
         {
-            this.billIdTextField.setEditable(true);
-            this.billRetrieveButton.setEnabled(true);
+            this.maintenanceTextField.setEditable(true);
+            this.maintenanceRetrieveButton.setEnabled(true);
         }
-    }//GEN-LAST:event_inserEditBillComboBoxActionPerformed
+    }//GEN-LAST:event_inserEditMaintenanceComboBoxActionPerformed
 
     private void companyDetailsComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyDetailsComboBoxActionPerformed
         
     }//GEN-LAST:event_companyDetailsComboBoxActionPerformed
 
-    private void companyDetailsGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyDetailsGoButtonActionPerformed
+    private void propertyGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertyGoButtonActionPerformed
         this.insertCompanyAction();
-    }//GEN-LAST:event_companyDetailsGoButtonActionPerformed
+    }//GEN-LAST:event_propertyGoButtonActionPerformed
 
-    private void companyRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyRetrieveButtonActionPerformed
+    private void propertyRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_propertyRetrieveButtonActionPerformed
        
-    }//GEN-LAST:event_companyRetrieveButtonActionPerformed
+    }//GEN-LAST:event_propertyRetrieveButtonActionPerformed
 
-    private void billRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billRetrieveButtonActionPerformed
+    private void maintenanceRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceRetrieveButtonActionPerformed
       
-    }//GEN-LAST:event_billRetrieveButtonActionPerformed
+    }//GEN-LAST:event_maintenanceRetrieveButtonActionPerformed
 
     private void reportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportButtonActionPerformed
         this.reportActions();
@@ -664,7 +656,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
     private void shutdownMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_shutdownMenuItemActionPerformed
         PopupMessageFrame mes = new PopupMessageFrame();
-        mes.setNotification(java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("THE-DATABASE-ENGINE-AND-THE-APPLICATION-WILL-SHUTDOWN"));
+        mes.setNotification("THE-DATABASE-ENGINE-AND-THE-APPLICATION-WILL-SHUTDOWN");
         ShutdownDB s = new ShutdownDB();
         System.exit(0);
 }//GEN-LAST:event_shutdownMenuItemActionPerformed
@@ -738,9 +730,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_reportComboBoxActionPerformed
 
-    private void incomeIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeIDTextFieldActionPerformed
+    private void maintenanceTypeIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTypeIDTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_incomeIDTextFieldActionPerformed
+    }//GEN-LAST:event_maintenanceTypeIDTextFieldActionPerformed
 
     private void incomeActionComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeActionComboBoxActionPerformed
         //an alaksei to status na vriskei to id kai analoga na thetei ta diafora values
@@ -748,30 +740,30 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         int a = this.incomeActionComboBox.getSelectedIndex();
         if (a == 0)//if selected value is insert
         {
-            this.incomeIDTextField.setEditable(false);
-            this.incomeRetrieveButton.setEnabled(false);
+            this.maintenanceTypeIDTextField.setEditable(false);
+            this.maintenanceTypeRetrieveButton.setEnabled(false);
 
         } else if (a == 1)//if selected value is edit
         {
 
-            this.incomeIDTextField.setEditable(true);
-            this.incomeRetrieveButton.setEnabled(true);
+            this.maintenanceTypeIDTextField.setEditable(true);
+            this.maintenanceTypeRetrieveButton.setEnabled(true);
 
         } else if (a == 2)//if selected value is delete
         {
-            this.incomeIDTextField.setEditable(true);
-            this.incomeRetrieveButton.setEnabled(true);
+            this.maintenanceTypeIDTextField.setEditable(true);
+            this.maintenanceTypeRetrieveButton.setEnabled(true);
         }
 
     }//GEN-LAST:event_incomeActionComboBoxActionPerformed
 
-    private void incomeGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeGoButtonActionPerformed
+    private void maintenanceTypeGoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTypeGoButtonActionPerformed
         this.incomeAction();
-    }//GEN-LAST:event_incomeGoButtonActionPerformed
+    }//GEN-LAST:event_maintenanceTypeGoButtonActionPerformed
 
-    private void incomeRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeRetrieveButtonActionPerformed
+    private void maintenanceTypeRetrieveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceTypeRetrieveButtonActionPerformed
         
-    }//GEN-LAST:event_incomeRetrieveButtonActionPerformed
+    }//GEN-LAST:event_maintenanceTypeRetrieveButtonActionPerformed
 
     private void executeSqlMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_executeSqlMenuItemActionPerformed
         ExecuteSqlWindow e = new ExecuteSqlWindow();
@@ -824,9 +816,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         // System.out.println(outStr);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void billAmountTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billAmountTextFieldActionPerformed
+    private void maintenanceAmountTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceAmountTextFieldActionPerformed
         this.billAction();
-    }//GEN-LAST:event_billAmountTextFieldActionPerformed
+    }//GEN-LAST:event_maintenanceAmountTextFieldActionPerformed
 
     private void incomeAmountTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_incomeAmountTextFieldActionPerformed
         this.incomeAction();
@@ -846,9 +838,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         mcr.displayApp();
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
-    private void billCommentTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billCommentTextFieldActionPerformed
+    private void maintenanceCommentTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maintenanceCommentTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_billCommentTextFieldActionPerformed
+    }//GEN-LAST:event_maintenanceCommentTextFieldActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
@@ -879,19 +871,11 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JPanel InsertEditBillPanel;
     private javax.swing.JPanel InsertEditCompanyPanel;
     private javax.swing.JPanel InsertEditIncome;
+    private javax.swing.JComboBox InsertEditMaintenanceTypePerPropertyComboBox;
     private javax.swing.JPanel ReportsPanel;
-    private javax.swing.JTextField billAmountTextField;
-    private javax.swing.JTextField billCommentTextField;
-    private javax.swing.JButton billGoButton;
-    private javax.swing.JTextField billIdTextField;
-    private javax.swing.JComboBox billInsertEditCompanyNameComboBox;
-    private javax.swing.JButton billRetrieveButton;
-    private javax.swing.JComboBox catComboBox;
+    private javax.swing.JLabel actionLabel;
     private javax.swing.JTextField companyDetailsCNameTextField;
     private javax.swing.JComboBox companyDetailsComboBox;
-    private javax.swing.JButton companyDetailsGoButton;
-    private javax.swing.JTextField companyDetailsIDTextField;
-    private javax.swing.JButton companyRetrieveButton;
     private javax.swing.JTextField dateOfPaymentTextField;
     private javax.swing.JMenuItem emptyDBMenuItem;
     private javax.swing.JMenu emptyDBMenyItem;
@@ -907,10 +891,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JTextField incomeAmountTextField;
     private javax.swing.JTextField incomeCommentTextField;
     private javax.swing.JTextField incomeDateTextField;
-    private javax.swing.JButton incomeGoButton;
-    private javax.swing.JTextField incomeIDTextField;
-    private javax.swing.JButton incomeRetrieveButton;
-    private javax.swing.JComboBox inserEditBillComboBox;
+    private javax.swing.JComboBox inserEditMaintenanceComboBox;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -919,7 +900,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -929,7 +909,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
@@ -939,7 +918,18 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField maintenanceAmountTextField;
+    private javax.swing.JTextField maintenanceCommentTextField;
+    private javax.swing.JButton maintenanceGoButton;
+    private javax.swing.JButton maintenanceRetrieveButton;
+    private javax.swing.JTextField maintenanceTextField;
+    private javax.swing.JButton maintenanceTypeGoButton;
+    private javax.swing.JTextField maintenanceTypeIDTextField;
+    private javax.swing.JButton maintenanceTypeRetrieveButton;
     private javax.swing.JMenu mergeOperationsJMenu;
+    private javax.swing.JButton propertyGoButton;
+    private javax.swing.JTextField propertyIDTextField;
+    private javax.swing.JButton propertyRetrieveButton;
     private javax.swing.JButton reportButton;
     private javax.swing.JComboBox reportComboBox;
     private javax.swing.JPanel reportPanel;
@@ -958,22 +948,22 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     }
 
     private void clearBillTextFields() {
-        billAmountTextField.setText("");
-        billIdTextField.setText("");
+        maintenanceAmountTextField.setText("");
+        maintenanceTextField.setText("");
         dateOfPaymentTextField.setText(today.getToday());
-        billCommentTextField.setText("");
+        maintenanceCommentTextField.setText("");
 
     }
 
     private void clearIncomeTextFields() {
-        incomeIDTextField.setText("");
+        maintenanceTypeIDTextField.setText("");
         incomeDateTextField.setText(today.getToday());
         incomeAmountTextField.setText("");
         incomeCommentTextField.setText("");
     }
 
     private void clearCompanyTextFields() {
-        companyDetailsIDTextField.setText("");
+        propertyIDTextField.setText("");
         companyDetailsCNameTextField.setText("");
         //refresh the combobox
         this.refreshCompaniesCombo();
@@ -985,7 +975,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      *
      */
     public void refreshCompaniesCombo() {
-        billInsertEditCompanyNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
+        InsertEditMaintenanceTypePerPropertyComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCompaniesCombo()));
        
     }
 
@@ -1058,7 +1048,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         PlotAxis xAxis = aPlot.getHorizontalAxis();
         xAxis.setScale(new LinearAxisScale());
         aPlot.getRuns().setLineColor(Color.blue);
-        this.removeOldPlotPanel();
         plPanel = new PlotPanel(aPlot);
         plPanel.setBackground(Color.white);
         tabs.addTab(plotLabel, plPanel);
@@ -1073,7 +1062,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         //TODO: change this with a faster algorithm, like the bill report
         SelectAllCompaniesIDS compIDS = new SelectAllCompaniesIDS();
         java.util.LinkedList cIdList = (LinkedList) compIDS.getAllRows();
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY ID"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY AFM"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("CATEGORY")};
+        String[] columnNames = {"COMPANY ID", "COMPANY NAME", "COMPANY AFM", "CATEGORY"};
         Object[][] d;
         if (cIdList == null) {
             String[] blank = {"", "", "", ""};
@@ -1084,7 +1073,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
             d = new Object[cIdList.size()][4];
         }
         currentReport = new ArrayList(cIdList.size() + 2);//for the save as txt function
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT COMPANIES"), "", "", ""};
+        String[] reportName = {"REPORT COMPANIES", "", "", ""};
         currentReport.add(reportName);
 
         currentReport.add(columnNames);
@@ -1113,7 +1102,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void reportPresentBills() {
         SelectAllBillsDetails billDet = new SelectAllBillsDetails();
         java.util.LinkedList bIdList = (LinkedList) billDet.getAllRows();
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("BILL ID"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DATE OF ISSUE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DATE OF PAYMENT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PRICE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMMENT")};
+        String[] columnNames = {"BILL ID", "COMPANY NAME", "DATE OF ISSUE", "DATE OF PAYMENT", "PRICE", "COMMENT"};
         Object[][] d;
         if (bIdList == null) {
             String[] blank = {"", "", "", "", "", ""};
@@ -1125,7 +1114,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         }
 
         currentReport = new ArrayList(bIdList.size() + 2);//for the save as txt function
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT BILLS"), "", "", "", "", ""};
+        String[] reportName = {"REPORT BILLS", "", "", "", "", ""};
         currentReport.add(reportName);
         currentReport.add(columnNames);
         Iterator it = bIdList.iterator();
@@ -1151,9 +1140,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void reportExpenceTotalsPerCompany() {
         SelectReportTotalExpenseSums s = new SelectReportTotalExpenseSums();
         currentReport = new ArrayList(s.getColumns().length + 2);
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT TOTAL EXPENSES PER COMPANY"), "", "", ""};
+        String[] reportName = {"REPORT TOTAL EXPENSES PER COMPANY", "", "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AFM")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME", "AFM"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < s.getColumns().length) {
@@ -1177,10 +1166,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         String year = (String) reportParametersComboBox.getSelectedItem();
         SelectReportExpenseSumsPerYear s = new SelectReportExpenseSumsPerYear(year);
         currentReport = new ArrayList(s.getColumns().length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT TOTAL YEARLY") + year + java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("EXPENSES PER COMPANY ");
+        String reportTitle = "REPORT TOTAL YEARLY" + year + "EXPENSES PER COMPANY ";
         String[] reportName = {reportTitle, "", "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AFM")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME", "AFM"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < s.getColumns().length) {
@@ -1203,10 +1192,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         SelectReportExpensesSumsPerMonthYear s = new SelectReportExpensesSumsPerMonthYear(year);
         String[][] dataCols = s.getColumns();
         currentReport = new ArrayList(dataCols.length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT TOTAL EXPENSES PER YEAR") + year + ")";
+        String reportTitle = "REPORT TOTAL EXPENSES PER YEAR" + year + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("MONTH")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "MONTH"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < dataCols.length) {
@@ -1229,7 +1218,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void reportIncomeRows() {
         SelectAllIncomeDetails incDet = new SelectAllIncomeDetails();
         java.util.LinkedList incList = (LinkedList) incDet.getAllRows();
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("INCOME ID"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DATE OF PAYMENT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMMENT")};
+        String[] columnNames = {"INCOME ID", "COMPANY NAME", "AMOUNT", "DATE OF PAYMENT", "COMMENT"};
         Object[][] d;
         if (incList == null) {
             String[] blank = {"", "", "", "", ""};
@@ -1240,7 +1229,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
             d = new Object[incList.size()][5];
         }
         currentReport = new ArrayList(d.length + 2);
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT INCOME"), "", "", ""};
+        String[] reportName = {"REPORT INCOME", "", "", ""};
         currentReport.add(reportName);
 
         currentReport.add(columnNames);
@@ -1271,9 +1260,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void reportTotalIncomeForAllYears() {
         SelectReportTotalIncomeSums s = new SelectReportTotalIncomeSums();
         currentReport = new ArrayList(s.getColumns().length + 2);
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT TOTAL INCOME"), "", ""};
+        String[] reportName = {"REPORT TOTAL INCOME", "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < s.getColumns().length) {
@@ -1294,9 +1283,9 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
     private void reportExpensesPerCategoryForAllYears() {
         SelectReportExpensesPerCategoryForAllYears e = new SelectReportExpensesPerCategoryForAllYears();
         currentReport = new ArrayList(e.getColumns().length + 2);
-        String[] reportName = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT EXPENSES PER CATEGORY FOR ALL YEARS"), "", ""};
+        String[] reportName = {"REPORT EXPENSES PER CATEGORY FOR ALL YEARS", "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < e.getColumns().length) {
@@ -1318,10 +1307,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         String year = (String) reportParametersComboBox.getSelectedItem();
         SelectReportExpensesPerCategoryForAYear e = new SelectReportExpensesPerCategoryForAYear(year);
         currentReport = new ArrayList(e.getColumns().length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT CATEGORY EXPENSES PER YEAR") + year + ")";
+        String reportTitle = "REPORT CATEGORY EXPENSES PER YEAR" + year + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME"};
         currentReport.add(columnNames);
         String[][] columnData = e.getColumns();
         int o = 0;
@@ -1345,10 +1334,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         String finalYear = (String) reportParametersFinalComboBox.getSelectedItem();
         CompareExpensesPerCategoryForTwoYears e = new CompareExpensesPerCategoryForTwoYears(initialYear, finalYear);
         currentReport = new ArrayList(e.getColumns().length);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPARE-TWO-YEAR_EXPENCES-PER-CATEGORY") + initialYear + "-" + finalYear + ")";
+        String reportTitle = "COMPARE-TWO-YEAR_EXPENCES-PER-CATEGORY" + initialYear + "-" + finalYear + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("CATEGORY"), initialYear, finalYear, java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE")};
+        String[] columnNames = {"CATEGORY", initialYear, finalYear, "PERCENTAGE"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < e.getColumns().length) {
@@ -1369,10 +1358,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         String year = (String) reportParametersComboBox.getSelectedItem();
         SelectReportIncomeSumsPerYear s = new SelectReportIncomeSumsPerYear(year);
         currentReport = new ArrayList(s.getColumns().length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT TOTAL EXPENSES PER YEAR") + year + ")";
+        String reportTitle = "REPORT TOTAL EXPENSES PER YEAR" + year + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAME")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "COMPANY NAME"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < s.getColumns().length) {
@@ -1394,10 +1383,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         String year = (String) reportParametersComboBox.getSelectedItem();
         SelectProfitPerMonthYear s = new SelectProfitPerMonthYear(year);
         currentReport = new ArrayList(s.getColumns().length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT MONTHLY PROFIT/LOSSES  FOR YEAR") + year + ")";
+        String reportTitle = "REPORT MONTHLY PROFIT/LOSSES  FOR YEAR" + year + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("MONTH")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "MONTH"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < s.getColumns().length) {
@@ -1422,10 +1411,10 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
         SelectReportIncomeSumsPerMonthYear s = new SelectReportIncomeSumsPerMonthYear(year);
         String[][] dataCols = s.getColumns();
         currentReport = new ArrayList(dataCols.length + 2);
-        String reportTitle = java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("REPORT MONTHLY INCOME FOR YEAR") + year + ")";
+        String reportTitle = "REPORT MONTHLY INCOME FOR YEAR" + year + ")";
         String[] reportName = {reportTitle, "", ""};
         currentReport.add(reportName);
-        String[] columnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AMOUNT"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("PERCENTAGE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("MONTH")};
+        String[] columnNames = {"AMOUNT", "PERCENTAGE", "MONTH"};
         currentReport.add(columnNames);
         int o = 0;
         while (o < dataCols.length) {
@@ -1445,7 +1434,7 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
      * for the report table.
      */
     private void interNReportJtableColNames() {
-        String[] jTableDefaultColumnNames = {java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("ID"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("COMPANY NAMES"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("AFM"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DATE OF ISSUE"), java.util.ResourceBundle.getBundle("i18n/myBillUIBundle").getString("DATE OF PAYMENT")};//the jtable default column names
+        String[] jTableDefaultColumnNames = {"ID", "COMPANY NAMES", "AFM", "DATE OF ISSUE", "DATE OF PAYMENT"};//the jtable default column names
         String[][] dataCols = {};
         reportTable.setModel(new MyTableModel(dataCols, jTableDefaultColumnNames));
     }
@@ -1521,9 +1510,6 @@ public class maintainmeDesktopUI extends javax.swing.JFrame {
 
     }
 
-    public void refreshCatIDCombo() {
-        catComboBox.setModel(new javax.swing.DefaultComboBoxModel(this.getCategoriesCombo()));
-    }
 
     private String[] getCategoriesCombo() {
         Categories com = new Categories();
